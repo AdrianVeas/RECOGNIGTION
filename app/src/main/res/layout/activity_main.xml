@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/imagelogo"
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="145dp"
+
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/logomicrofono" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="369dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/imagelogo"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/recognigtion"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/logorecognigtion" />
+
+    <TextView
+        android:id="@+id/txttitulo"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/imageView2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/log_in"
+        android:textAlignment="center"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinuar"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/txtnickname"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/color1"
+        android:backgroundTint="@color/color1"
+        android:onClick="onClick"
+        android:text="@string/btnnext"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txttitlename"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txttitulo"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/nick_name"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/txtnickname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/txttitlename"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:background="@color/color1"
+        android:textColorHint="@color/colorPrimary"
+        android:ems="10"
+        android:fontFamily="@font/ocraext"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>

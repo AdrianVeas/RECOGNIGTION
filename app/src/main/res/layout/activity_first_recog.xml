@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstRecogActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/txttitulofirstrec"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/rec_your_voice_for_first_time"
+        android:textAlignment="center"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/txtdetailfirstrec"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/txttitulofirstrec"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/say_recognigtion_your_nick_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btnrecfirst"
+        android:layout_width="210dp"
+        android:layout_height="185dp"
+        android:layout_below="@id/txttitulofirstrec"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:drawableLeft="@drawable/logo"
+        android:drawablePadding="0dp"
+        android:text=""
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txttimerfirstrec"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/ocraext"
+        android:layout_below="@id/btnrecfirst"
+        android:text="@string/_0_00"
+        android:textAlignment="center"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnfirstRec"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/txttimerfirstrec"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/color1"
+        android:backgroundTint="@color/color1"
+        android:onClick="onClick"
+        android:text="@string/next"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+</RelativeLayout>

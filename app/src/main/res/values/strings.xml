@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RECOGNIGTION</string>
+    <string name="_0_00">0:00</string>
+    <string name="rec_your_voice_for_first_time">REC YOUR VOICE FOR FIRST TIME</string>
+    <string name="next">NEXT</string>
+    <string name="say_recognigtion_your_nick_name">SAY: \'RECOGNIGTION\' + YOUR NICK NAME</string>
+    <string name="todo">TODO</string>
+    <string name="recognigtion">TODO</string>
+    <string name="nick_name">NICK NAME:</string>
+    <string name="btnnext">NEXT</string>
+    <string name="log_in">LOG-IN</string>
+    <string name="rec_your_voice_for_recognigtion">REC YOUR VOICE FOR RECOGNIGTION</string>
+    <string name="say_recognigtion_anything">SAY: \'RECOGNIGTION\' + ANYTHING</string>
+    <string name="btnnextrec">NEXT</string>
+</resources>
