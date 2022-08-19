@@ -41,14 +41,16 @@
 
     <Button
         android:id="@+id/btnrecognigtion"
-        android:layout_width="210dp"
-        android:layout_height="185dp"
+        android:layout_width="wrap_content"
+        android:layout_height="212dp"
         android:layout_below="@id/txttitulorecognigtion"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="95dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:drawableLeft="@drawable/logo"
+        android:drawableTop="@drawable/iconosinbordes"
         android:drawablePadding="0dp"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -56,12 +58,12 @@
         android:id="@+id/txttimerrecognigtion"
         android:layout_width="350dp"
         android:layout_height="60dp"
+        android:layout_below="@id/btnrecognigtion"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/ocraext"
-        android:layout_below="@id/btnrecognigtion"
         android:text="@string/_0_00"
         android:textAlignment="center"
 

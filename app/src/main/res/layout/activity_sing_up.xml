@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingUpActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/txttitulofirstrec"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/register_your_user"
+        android:textAlignment="center"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/txttitlename"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txttitulofirstrec"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/ocraext"
+        android:textAlignment="center"
+        android:text="@string/write_the_name_of_your_user"
+
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/txtnickname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/txttitlename"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=""
+        android:background="@color/color1"
+        android:ems="10"
+        android:fontFamily="@font/ocraext"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtdetailfirstrec"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/txtnickname"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/ocraext"
+        android:text="@string/say_recognigtion_your_nick_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/btnrecfirst"
+        android:layout_width="wrap_content"
+        android:layout_height="212dp"
+        android:layout_below="@id/txtdetailfirstrec"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:drawableTop="@drawable/iconosinbordes"
+        android:drawablePadding="0dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnfirstRec"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/btnplayrecord"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color1"
+        android:backgroundTint="@color/color1"
+        android:onClick="onClick"
+        android:text="@string/next"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnplayrecord"
+        android:layout_width="117dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/ProgressBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color1"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="playaudio"
+        android:text="@string/play_record"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnrecfirst"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:progress="60"
+
+        android:scaleX="" />
+
+
+</RelativeLayout>
