@@ -17,4 +17,9 @@
     <string name="register_your_user">REGISTER YOUR USER</string>
     <string name="write_the_name_of_your_user">WRITE THE NAME OF YOUR USER:</string>
     <string name="play_record">PLAY RECORD</string>
+    <string name="recognize">RECOGNIZE</string>
+    <string name="back_main">BACK MAIN</string>
+    <string name="play_audio">PLAY AUDIO</string>
+    <string name="stop_audio">STOP AUDIO</string>
+    <string name="save">SAVE</string>
 </resources>

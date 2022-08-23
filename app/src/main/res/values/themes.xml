@@ -15,4 +15,18 @@
         <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="GreenBTextGray" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="GrayBTextGreen" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
 </resources>

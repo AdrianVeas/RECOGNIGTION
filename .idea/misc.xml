@@ -4,10 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.145" />
+        <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/drawable/cursor_color.xml" value="0.1585" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/drawable/ic_launcher_background.xml" value="0.145" />
+        <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/drawable/styleprogressb.xml" value="0.1295" />
+        <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_creadits.xml" value="0.209375" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_first_recog.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_recognigtion.xml" value="0.209375" />
+        <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_recognize.xml" value="0.25" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_response.xml" value="0.209375" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/layout/activity_sing_up.xml" value="0.209375" />
         <entry key="..\:/Users/ASUS/Desktop/Universidad/8vo Semestre/APLICACIONES DISTRIBUIDAS/PROYECTO DE AULA/RECOGNIGTION/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15" />
