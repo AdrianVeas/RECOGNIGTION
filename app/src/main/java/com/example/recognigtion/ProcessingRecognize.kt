@@ -24,7 +24,8 @@ class ProcessingRecognize : AppCompatActivity() {
         record.startRecording()
         val audioTensor = classifier.createInputTensorAudio()
         audioTensor.load(record)
-        val results: List<Classifications> = audioClassifier.classify(audioTensor)
+
+        val results: List<Classifications> = AudioClassifier.classify(audioTensor)
 
     }
 
