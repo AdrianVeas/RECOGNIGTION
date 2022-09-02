@@ -22,4 +22,10 @@
     <string name="play_audio">PLAY AUDIO</string>
     <string name="stop_audio">STOP AUDIO</string>
     <string name="save">SAVE</string>
+    <string name="button">Button</string>
+    <string name="welcome_to_recognize">WELCOME TO RECOGNIZE</string>
+    <string name="choose_the_option_you_need">CHOOSE THE OPTION YOU NEED</string>
+    <string name="developer_adrian_veas_nig">DEVELOPER: ADRIAN VEAS (NIG)</string>
+    <string name="thaks_for_use_recognigtion">THAKS FOR USE RECOGNIGTION</string>
+    <string name="wait_processing_your_audio">WAIT, PROCESSING YOUR AUDIO</string>
 </resources>

@@ -11,7 +11,7 @@ class CreaditsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creadits)
     }
-    fun BackMain (v: View?){
+    fun backMainCredits (v: View?){
         try {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -19,5 +19,6 @@ class CreaditsActivity : AppCompatActivity() {
         catch (e: Exception){
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_SHORT).show()
         }
+        v.toString()
     }
 }

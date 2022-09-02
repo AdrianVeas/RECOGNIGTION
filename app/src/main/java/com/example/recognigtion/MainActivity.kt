@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
-/*.nig*/
+/*NIGMA*/
 
 class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,16 +30,16 @@ class MainActivity : AppCompatActivity(){
 
 
     }
-     fun Recognize(v: View?) {
+     fun recognize(v: View?) {
         try{
             val intent = Intent(this, RecognizeActivity::class.java)
             startActivity(intent)
         }catch (e: Exception){
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_SHORT).show()
         }
-
+        v.toString()
     }
-    fun SingUp(v: View?) {
+    fun singUp(v: View?) {
         try {
             val intent = Intent(this, SingUpActivity::class.java)
             startActivity(intent)
@@ -47,13 +47,15 @@ class MainActivity : AppCompatActivity(){
         catch (e: Exception){
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_SHORT).show()
         }
+        v.toString()
     }
-    fun Credits(v: View?){
+    fun credits(v: View?){
         try {
             val intent = Intent(this, CreaditsActivity::class.java)
             startActivity(intent)
         }catch (e: Exception){
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_SHORT).show()
         }
+        v.toString()
     }
 }

@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".CreaditsActivity"
     android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/txttittlecredits"
         android:layout_width="350dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="0dp"
         android:fontFamily="@font/ocraext"
 
-        android:text="THAKS FOR USE RECOGNIGTION"
+        android:text="@string/thaks_for_use_recognigtion"
         android:textAlignment="center"
 
         android:textColor="@color/colorPrimary"
@@ -33,10 +33,11 @@
 
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/nig" />
+
     <TextView
         android:id="@+id/txtdescriptioncredits"
         android:layout_width="350dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgnig"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
@@ -44,12 +45,13 @@
         android:layout_marginBottom="0dp"
         android:fontFamily="@font/ocraext"
 
-        android:text="DEVELOPER: ADRIAN VEAS (NIG)"
+        android:text="@string/developer_adrian_veas_nig"
         android:textAlignment="center"
 
         android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNext"
         android:layout_width="117dp"
@@ -60,8 +62,10 @@
         android:layout_marginTop="30dp"
         android:background="@color/color1"
         android:backgroundTint="@color/color1"
-        android:onClick="BackMain"
+        android:onClick="backMainCredits"
         android:text="@string/back_main"
+        android:fontFamily="@font/ocraext"
+        android:textSize="15sp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
