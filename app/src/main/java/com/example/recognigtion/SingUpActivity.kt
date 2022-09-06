@@ -121,7 +121,7 @@ class SingUpActivity : AppCompatActivity() {
                     }
                 }
                 1->{ //stoprecord
-                    if (time > 4.0){
+                    if (time > 3.0){
                         chngStoptoRecord()
                         settingsAudio.stopRecording()
                         resetTimer()

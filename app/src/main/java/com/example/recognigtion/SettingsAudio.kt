@@ -27,24 +27,17 @@ class SettingsAudio (val Cont : Context) {
     private var recordingThread: Thread? = null
 
     fun startRecording(_filename: String? = null, internalStorage: Boolean = false) : String {
-        //val filename = _filename ?: "recording-${System.currentTimeMillis()}.wav"
+        val filename = _filename ?: "recording-${System.currentTimeMillis()}"
 
         //val path = if (internalStorage) context.filesDir?.path + "/$filename"
         //else context.externalCacheDir?.path + "/$filename"
 
-        val path = "$outputFile/$_filename.wav"
+        val path = "$outputFile/$filename.wav"
         if (ActivityCompat.checkSelfPermission(
                 Cont as Activity,
                 Manifest.permission.RECORD_AUDIO
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return path
         }
         recorder = AudioRecord(MediaRecorder.AudioSource.MIC,
@@ -186,7 +179,7 @@ class SettingsAudio (val Cont : Context) {
     }
     fun stopRecording() {
         recorder?.run {
-            isRecording = false;
+            isRecording = false
             stop()
             release()
             recordingThread = null

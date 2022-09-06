@@ -9,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.Toast
+import android.widget.*
 
 class RecognizeActivity : AppCompatActivity() {
 
@@ -28,7 +25,7 @@ class RecognizeActivity : AppCompatActivity() {
     private var timeMax = 15.0
     private lateinit var serviceIntent:Intent
     private var timerStarted: Boolean = false
-
+    private lateinit var txtdetail : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +36,7 @@ class RecognizeActivity : AppCompatActivity() {
             btnplay = findViewById(R.id.btnPlayAudio)
             pbrecord.progress = 0
             serviceIntent = Intent(applicationContext,TimerService::class.java)
+            txtdetail = findViewById(R.id.txtdetailrecog)
             registerReceiver(updateTime, IntentFilter(TimerService.TIMER_UPDATE))
         } catch (e: Exception) {
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_LONG).show()
@@ -48,18 +46,25 @@ class RecognizeActivity : AppCompatActivity() {
         try {
             when(staterecord){
                 0->{ //record
-                    outputFile = "$outputFile/record.mp3"
-                    settingsAudio.startRecording(outputFile)
+                    //outputFile = "$outputFile/record.wav"
+                    outputFile = settingsAudio.startRecording("record", true)
+                    //settingsAudio.startRecording(outputFile)
+                    txtdetail.text = outputFile
                     startStopTimer()
                     chngRecordtoStop()
                     staterecord = 1
                     statepb = 0
                 }
                 1->{ //stoprecord
-                    settingsAudio.stopRecording()
-                    resetTimer()
-                    staterecord = 2
-                    chngStoptoRecord()
+                    if (time > 3.0){
+                        chngStoptoRecord()
+                        settingsAudio.stopRecording()
+                        resetTimer()
+                        staterecord = 2
+                    }else{
+                        Toast.makeText(applicationContext, "Please say RECOGNIGTION!!!", Toast.LENGTH_LONG).show()
+                        staterecord = 1
+                    }
                 }
                 2->{
                     val builder = AlertDialog.Builder(this)
@@ -86,7 +91,7 @@ class RecognizeActivity : AppCompatActivity() {
     fun recognize(v: View?) {
         try {
             if (staterecord == 2){
-                val intent = Intent(this, ProcessingSingUpActivity::class.java)
+                val intent = Intent(this, ProcessingRecognize::class.java)
                 val bundle = Bundle()
                 bundle.putString("type", "1")
                 bundle.putString("outputFile", outputFile)
@@ -112,13 +117,13 @@ class RecognizeActivity : AppCompatActivity() {
             when(stateplay){
                 0->{ //playaudio
                     if (staterecord == 2){
-                        settingsAudio.playaudio(outputFile)
-                        timeMax = convertInttoTime(settingsAudio.getDuration())
-                        startStopTimer()
                         pbrecord.progress=0
                         chngPlaytoStop()
                         stateplay = 1
                         statepb = 1
+                        settingsAudio.playaudio(outputFile)
+                        timeMax = convertInttoTime(settingsAudio.getDuration())
+                        startStopTimer()
                     }else{
                         if(staterecord == 1){
                             Toast.makeText(applicationContext, "Stop record first", Toast.LENGTH_LONG).show()
