@@ -24,7 +24,7 @@ class SingUpActivity : AppCompatActivity() {
     private var stateplay : Int = 0
     private var statepb : Int = 0
     private var time = 0.0
-    private var timeMax = 15.0
+    private var timeMax = 10.0
     private lateinit var serviceIntent:Intent
     private var timerStarted: Boolean = false
 
@@ -83,7 +83,7 @@ class SingUpActivity : AppCompatActivity() {
         override fun onReceive(context: Context, intent: Intent) {
             time = intent.getDoubleExtra(TimerService.TIME_EXTRA, 0.0)
             try{
-                if(time<timeMax){
+                if(time<=timeMax){
                     pbrecord.progress = (time/timeMax*100).toInt()
                 }else{
                     if (statepb == 0){
@@ -97,6 +97,7 @@ class SingUpActivity : AppCompatActivity() {
                     }
 
                 }
+
             }catch (e: Exception){
                 Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_LONG).show()
             }
@@ -111,8 +112,8 @@ class SingUpActivity : AppCompatActivity() {
                         chngRecordtoStop()
                         //outputFile = "$outputFile/RECOGNIGTION/USERS/$txtnickname.mp3"
                         //outputFile = "$outputFile/${txtnickname.text}.mp3"
-                        outputFile = settingsAudio.startRecording(txtnickname.text.toString(), true)
-                        txtdetail.text = outputFile
+                        outputFile = settingsAudio.startRecording(txtnickname.text.toString())
+                        //txtdetail.text = outputFile
                         startStopTimer()
                         staterecord = 1
                         statepb = 0
@@ -192,10 +193,14 @@ class SingUpActivity : AppCompatActivity() {
     fun save(v: View?){
         try {
             v.toString()
+            var txtnicknameup = txtnickname.text.toString()
+            val toLowerCase = ToLowerCase()
+            txtnicknameup = toLowerCase.toLowerCase(txtnicknameup)
             val intent = Intent(this, ProcessingSingUpActivity::class.java)
             val bundle = Bundle()
             bundle.putString("type", "0")
             bundle.putString("outputFile", outputFile)
+            bundle.putString("nickname", txtnicknameup)
             intent.putExtras(bundle)
             startActivity(intent)
         }catch(e:Exception){
@@ -221,6 +226,21 @@ class SingUpActivity : AppCompatActivity() {
         }catch(e:Exception){
             Toast.makeText(applicationContext, "Error:"+e.message, Toast.LENGTH_LONG).show()
         }
+    }
+
+    class ToLowerCase {
+        fun toLowerCase(str: String): String {
+            val result = StringBuilder()
+            for(ch in str) {
+                if (ch in 'A'..'Z') {
+                    result.append(ch + ('a' - 'A') )
+                } else {
+                    result.append(ch)
+                }
+            }
+            return result.toString()
+        }
+
     }
 }
 

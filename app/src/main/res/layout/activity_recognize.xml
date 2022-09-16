@@ -44,19 +44,19 @@
         android:id="@+id/btnRecord"
         android:layout_width="wrap_content"
         android:layout_height="212dp"
-        android:layout_below="@id/txttitulorecognigtion"
+        android:layout_below="@id/txtdetailrecog"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="100dp"
         android:backgroundTint="@color/colorPrimaryDark"
+        android:contentDescription="@string/button"
         android:drawablePadding="0dp"
         android:onClick="recordAudio"
         android:src="@drawable/iconorec"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/button" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ProgressBar
         android:id="@+id/pbRecognize"

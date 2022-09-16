@@ -33,7 +33,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="170dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="0dp"
         android:fontFamily="@font/ocraext"
         android:text="LOADING..."
         android:textAlignment="center"
@@ -49,7 +49,7 @@
         android:layout_below="@id/txtdetail"
         android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:progress="60"
         android:theme="@style/ProgressBarTheme" />
 

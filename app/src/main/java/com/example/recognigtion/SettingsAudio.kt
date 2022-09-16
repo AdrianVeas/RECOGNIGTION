@@ -23,16 +23,15 @@ class SettingsAudio (val Cont : Context) {
 
     private var recorder: AudioRecord? = null
     private var isRecording = false
-    private var outputFile: String = Environment.getExternalStorageDirectory().absolutePath
+   // private var outputFile: String = Environment.getExternalStorageDirectory().absolutePath
     private var recordingThread: Thread? = null
 
-    fun startRecording(_filename: String? = null, internalStorage: Boolean = false) : String {
+    fun startRecording(_filename: String? = null) : String {
         val filename = _filename ?: "recording-${System.currentTimeMillis()}"
 
-        //val path = if (internalStorage) context.filesDir?.path + "/$filename"
-        //else context.externalCacheDir?.path + "/$filename"
+        val path = context.filesDir?.path + "/$filename"
 
-        val path = "$outputFile/$filename.wav"
+        //val path = "$outputFile/$filename.wav"
         if (ActivityCompat.checkSelfPermission(
                 Cont as Activity,
                 Manifest.permission.RECORD_AUDIO

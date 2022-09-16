@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class ResponseActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var output:  String
@@ -16,7 +17,31 @@ class ResponseActivity : AppCompatActivity(), View.OnClickListener {
         val bun = intent.extras
         txtresponse = findViewById(R.id.txtresponse)
         output = bun?.getString("output").toString()
-        txtresponse.text = output
+
+        try{
+            if (output.contains("Ruido"))
+            {
+                txtresponse.text = "THE USER IS: NIGMA."
+            }else{
+                if (output.contains("MOM"))
+                {
+                    txtresponse.text = "THE USER IS: MOM"
+                }else{
+                    if (output.contains("NO-NIGMA"))
+                    {
+                        txtresponse.text = "DON'T EXIST"
+                    }else{
+                        if (output.contains("NIGMA"))
+                        {
+                            txtresponse.text = "THE USER IS: NIGMA"
+                        }
+                    }
+                }
+            }
+        }catch (e : Exception){
+            Toast.makeText(applicationContext, "Error Response:"+e.message, Toast.LENGTH_LONG).show()
+        }
+
     }
 
     override fun onClick(v: View?) {

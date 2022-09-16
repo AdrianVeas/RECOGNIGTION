@@ -26,11 +26,11 @@
     <TextView
         android:id="@+id/txtresponse"
         android:layout_width="350dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txttituloresponse"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:layout_below="@id/txttituloresponse"
         android:fontFamily="@font/ocraext"
         android:text="THE USER IS: "
         android:textAlignment="center"

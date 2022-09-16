@@ -31,14 +31,14 @@
         android:layout_below="@id/txtprogressrecog"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="190dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/ocraext"
         android:text="LOADING..."
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="normal" />
 
     <ProgressBar
@@ -49,7 +49,7 @@
         android:layout_below="@id/txtdetailrecog"
         android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:progress="60"
         android:theme="@style/ProgressBarTheme" />
 

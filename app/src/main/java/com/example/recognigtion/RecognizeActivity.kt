@@ -22,7 +22,7 @@ class RecognizeActivity : AppCompatActivity() {
     private var stateplay : Int = 0
     private var statepb : Int = 0
     private var time = 0.0
-    private var timeMax = 15.0
+    private var timeMax = 10.0
     private lateinit var serviceIntent:Intent
     private var timerStarted: Boolean = false
     private lateinit var txtdetail : TextView
@@ -46,12 +46,11 @@ class RecognizeActivity : AppCompatActivity() {
         try {
             when(staterecord){
                 0->{ //record
-                    //outputFile = "$outputFile/record.wav"
-                    outputFile = settingsAudio.startRecording("record", true)
-                    //settingsAudio.startRecording(outputFile)
-                    txtdetail.text = outputFile
                     startStopTimer()
                     chngRecordtoStop()
+
+                    outputFile = settingsAudio.startRecording("record")
+
                     staterecord = 1
                     statepb = 0
                 }
@@ -91,9 +90,9 @@ class RecognizeActivity : AppCompatActivity() {
     fun recognize(v: View?) {
         try {
             if (staterecord == 2){
+                resetTimer()
                 val intent = Intent(this, ProcessingRecognize::class.java)
                 val bundle = Bundle()
-                bundle.putString("type", "1")
                 bundle.putString("outputFile", outputFile)
                 intent.putExtras(bundle)
                 startActivity(intent)
@@ -150,6 +149,7 @@ class RecognizeActivity : AppCompatActivity() {
             stopTimer()
         }else{
             startTimer()
+
         }
     }
     private fun resetTimer(){
@@ -180,7 +180,7 @@ class RecognizeActivity : AppCompatActivity() {
         override fun onReceive(context: Context, intent: Intent) {
             time = intent.getDoubleExtra(TimerService.TIME_EXTRA, 0.0)
             try{
-                if(time<timeMax){
+                if(time<=timeMax){
                     pbrecord.progress = (time/timeMax*100).toInt()
                 }else{
                     if (statepb == 0){

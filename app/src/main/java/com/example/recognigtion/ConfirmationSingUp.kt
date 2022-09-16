@@ -16,7 +16,7 @@ class ConfirmationSingUp : AppCompatActivity() , View.OnClickListener{
         val bun = intent.extras
         txtresponse = findViewById(R.id.txtresponseconfirmation)
         output = bun?.getString("output").toString()
-        txtresponse.text = output
+        txtresponse.text = "USER SAVED"
     }
     override fun onClick(v: View?) {
         val intent = Intent(this, MainActivity::class.java)
